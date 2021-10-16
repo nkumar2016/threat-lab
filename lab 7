@@ -1,0 +1,9 @@
+import requests
+import re
+
+URL = "https://bazaar.abuse.ch/browse/"
+page = requests.get(URL)
+x = re.findall("[A-Fa-f0-9]{64}", page.text)
+
+print(x)
+
